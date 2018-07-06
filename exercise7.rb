@@ -4,10 +4,19 @@ students = {
   cohort3: 22,
 }
 
-def display(list)
-  list.each do |key, value|
+def display(hash)
+  hash.each do |key, value|
     puts "#{key}: #{value} students"
   end
 end
 
-display(students)
+def add(hash, key, value)
+  hash[key.to_sym] = value
+end
+
+
+def update(hash, multiplier)
+  hash.each do |key, value|
+    hash[key] = value * multiplier
+  end
+end
