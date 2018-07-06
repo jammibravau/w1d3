@@ -20,3 +20,15 @@ def update(hash, multiplier)
     hash[key] = value * multiplier
   end
 end
+
+def delete(hash, key)
+  hash.delete(key)
+end
+
+def sum(hash)
+  total_sum = 0
+  hash.each do |key, value|
+    total_sum = total_sum + value
+  end
+  return total_sum
+end
